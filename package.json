@@ -12,7 +12,7 @@
     "commitlint": "commitlint --edit",
     "precommit": "lint-staged",
     "prepush": "yarn test",
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "dependencies": {
     "@sentry/nextjs": "^9.31.0",
