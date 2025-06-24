@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Stack Template
 
-## Getting Started
+A modern and minimal template built with [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/), and [Tailwind CSS](https://tailwindcss.com/), featuring a pre-configured setup for scalable and maintainable applications. Includes support for [shadcn/ui](https://ui.shadcn.com/) components (manually installed).
 
-First, run the development server:
+## ✨ Features
+
+* ⚡ Next.js 15 with App Router
+* 💅 Tailwind CSS 4 for utility-first styling
+* 🧹 shadcn/ui components (manually integrated)
+* 🧠 TypeScript for static typing
+* 🔧 ESLint, Prettier, and lint-staged for code quality
+* 📆 Husky for Git hooks and commit linting
+* 📑 Conventional Commits with Commitlint
+* 🧪 Jest for unit testing
+* 📈 Sentry integration for error monitoring
+
+## 📦 Stack
+
+* `next` `15.3.4`
+* `react` `^19.0.0`
+* `tailwindcss` `^4`
+* `shadcn/ui` (installed manually)
+* `clsx`, `class-variance-authority`, `tailwind-merge`
+* `lucide-react` for icons
+* `eslint`, `prettier`, `husky`, `commitlint`
+
+## 🛠️ Scripts
+
+| Script            | Description                          |
+| ----------------- | ------------------------------------ |
+| `yarn dev`        | Start the development server         |
+| `yarn build`      | Build for production                 |
+| `yarn start`      | Start the production server          |
+| `yarn lint`       | Run ESLint                           |
+| `yarn format`     | Format code with Prettier            |
+| `yarn test`       | Run tests with Jest                  |
+| `yarn prepare`    | Set up Git hooks with Husky          |
+| `yarn commitlint` | Validate commits against conventions |
+
+## 🧪 Testing
+
+This template uses [Jest](https://jestjs.io/) for unit testing. To run the tests:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+yarn test
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✅ Linting & Formatting
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* ESLint is configured with import and prettier plugins
+* Prettier is used to ensure consistent formatting
+* Husky + lint-staged runs linting and formatting before each commit
+* Commitlint ensures all commits follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) standard
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Getting Started
 
-## Learn More
+```bash
+# Install dependencies
+yarn
 
-To learn more about Next.js, take a look at the following resources:
+# Start the development server
+yarn dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📂 Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+.
+├── public/                       # Static assets
+├── src/
+│   ├── app/                      # Next.js App Router
+│   │   ├── api/                  # API routes
+│   │   └── sentry-example-page/  # Example page
+│   ├── lib/                      # Utilities and instrumentation
+│   └── components/               # UI components (shadcn/ui)
+├── .env                          # Environment variables
+├── package.json
+├── tsconfig.json
+├── tailwind.config.ts
+├── postcss.config.mjs
+├── next.config.ts
+├── eslint.config.js
+├── README.md
+```
 
-## Deploy on Vercel
+## 🧹 About shadcn/ui
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Although `shadcn/ui` is not listed in the `package.json`, components from the library have been installed manually. Learn more and customize your components at [ui.shadcn.com](https://ui.shadcn.com).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📋 License
+
+This project is licensed under the MIT License.
